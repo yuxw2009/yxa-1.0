@@ -1267,7 +1267,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
 
 
 
-REQUIRE_ERLANG="5.5.2 (Erlang/OTP R11B-2)"
+REQUIRE_ERLANG="9.0 (Erlang/OTP R11B-2)" #"5.5.2 (Erlang/OTP R11B-2)"
 
 ac_aux_dir=
 for ac_dir in scripts $srcdir/scripts; do

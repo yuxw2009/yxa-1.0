@@ -65,9 +65,10 @@ start(normal, [AppModule]) ->
     sup_error_logger:start(),
     catch ssl:start(),
     %% We seed SSL better after starting our configuration subsystem
-    ssl:seed([
-	      io_lib:format("~p", [now()])
-	     ]),
+    %ssl:seed([
+	%      io_lib:format("~p", [now()])
+	%     ]),
+	rand:seed(exsplus,os:timestamp()),
     mnesia:start(),
     ok = init_statistics(),
     case sipserver_sup:start_link(AppModule, []) of

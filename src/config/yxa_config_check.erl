@@ -543,7 +543,8 @@ type_check_elements([H | T], sipurl, Def, Res) when is_list(H) ->
 %%
 %% sip_sipurl
 %%
-type_check_elements([H | T], sip_sipurl, Def, Res) when is_list(H) ->
+type_check_elements(TT=[H | T], sip_sipurl, Def, Res) when is_list(H) ->
+    io:format("type_check_elements*******~p~n",[TT]),
     case sipurl:parse_url_with_default_protocol("sip", H) of
 	URL when is_record(URL, sipurl) ->
 	    case Def#cfg_entry.normalize of

@@ -1,8 +1,18 @@
 %% Erlang OTP R11B-2 library versions
 %% File to get Erlang distribution using SSL started
 {release, {"YXA foo","0.0"}, {erts, "5.2"},
- [{kernel,"2.11.2"},
-  {stdlib,"1.14.2"},
-  {ssl, "3.0.12"}
+ [
+ %{kernel,"2.11.2"},
+ {kernel,"5.3"},
+% {stdlib,"1.14.2"},
+  {stdlib,"3.4"},
+%  {ssl, "3.0.12"},
+  {ssl, "8.2"},
+%  {asn1, "1.4.4.11"},
+  {asn1, "5.0"},
+%  {mnesia, "4.3.3"},
+  {mnesia, "4.15"},  
+  {crypto,"4.0"},
+  {public_key,"1.4.1"}
  ]
 }.

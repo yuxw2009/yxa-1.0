@@ -24,7 +24,8 @@
 %%--------------------------------------------------------------------
 %% Include files
 %%--------------------------------------------------------------------
--include_lib("ssl/include/SSL-PKIX.hrl").
+%-include_lib("ssl/include/SSL-PKIX.hrl").
+-include_lib("ssl/src/ssl_internal.hrl").
 -include("sipsocket.hrl").
 
 

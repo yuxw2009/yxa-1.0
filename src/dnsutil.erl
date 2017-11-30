@@ -59,7 +59,7 @@
 %%--------------------------------------------------------------------
 
 %% The DNS NAPTR RR type code. Other RR type codes are defined in OTP inet_dns.hrl.
--define(T_NAPTR, 35).
+%-define(T_NAPTR, 35).
 
 
 %%====================================================================
