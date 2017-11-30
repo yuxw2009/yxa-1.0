@@ -1,0 +1,19 @@
+{application, pstnproxy,
+ [{description, "PSTN SIP proxy"},
+  {vsn,"0.0"},
+  {modules, [
+	     pstnproxy
+	    ]},
+  {registered, [
+		sipserver_sup,
+		yxa_config,
+		logger,
+		ldap_client,
+		tcp_dispatcher,
+		sipsocket_udp,
+		transactionlayer
+	       ]},
+  {mod, {sipserver, [pstnproxy]}},
+  {env, []},
+  {applications,
+        [kernel, stdlib]}]}.

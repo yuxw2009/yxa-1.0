@@ -1,0 +1,19 @@
+{application, appserver,
+ [{description, "SIP application server"},
+  {vsn,"0.0"},
+  {modules, [
+	     appserver
+	    ]},
+  {registered, [
+		sipserver_sup,
+		yxa_config,
+		logger,
+		ldap_client,
+		tcp_dispatcher,
+		sipsocket_udp,
+		transactionlayer
+	       ]},
+  {mod, {sipserver, [appserver]}},
+  {env, []},
+  {applications,
+        [kernel, stdlib]}]}.
